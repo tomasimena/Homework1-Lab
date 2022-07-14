@@ -1,0 +1,50 @@
+﻿
+<h1>Index</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Username
+            </th>
+            <th>
+                Id
+            </th>
+            <th>
+                Phone Number
+            </th>
+            <th>
+                Options
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in ViewData["users"] as List<Microsoft.AspNetCore.Identity.IdentityUser>)
+        {
+            <tr>
+                <td>
+                    @user.UserName
+                </td>
+                <td>
+                    @user.Id
+                </td>
+                <td>
+                    @user.PhoneNumber
+                </td>
+                <td>
+                    <a asp-controller="Administrator" asp-action="MakeAdmin" asp-route-id="@user.Id"
+                       class="btn btn-sm btn-success" style="color:white">Make Admin</a>
+                    <a asp-controller="Administrator" asp-action="MakeBasicUser" asp-route-id="@user.Id"
+                       class="btn btn-sm btn-warning" style="color:white">Make Basic User</a>
+                    <a asp-controller="Administrator" asp-action="Delete" asp-route-id="@user.Id"
+                       class="btn btn-sm btn-danger" style="color:white">Delete</a>
+                </td>
+                @*<td>
+                        <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    </td>*@
+            </tr>
+        }
+    </tbody>
+</table>

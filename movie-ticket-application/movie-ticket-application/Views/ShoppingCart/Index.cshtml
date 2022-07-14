@@ -1,0 +1,73 @@
+﻿
+<h1>Shopping Cart</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Movie Name
+            </th>
+            <th>
+                Hall Name
+            </th>
+            <th>
+                Expiration Date
+            </th>
+            <th>
+                Quantity
+            </th>
+            <th>
+                Price
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in ViewData["shoppingCartItems"] as List<CartItem>)
+        {
+            <tr>
+                <td>
+                    @item.MovieTicket.Movie.Title
+                </td>
+                <td>
+                    @item.MovieTicket.HallName
+                </td>
+                <td>
+                    @item.MovieTicket.ExpirationDate
+                </td>
+                <td>
+                    @item.Quantity
+                </td>
+                <td>
+                    @item.MovieTicket.Movie.Price
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a class="btn btn-danger btn-lg" asp-controller="ShoppingCart" asp-action="EmptyShoppingCart">Empty My Cart</a>
+
+<button type="button" class="btn btn-outline-success btn-lg" data-toggle="modal" data-target="#exampleModal">
+    Checkout
+</button>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <h3>Are you sure you want to checkout?</h3>
+                <h4>The total price of all the items is: <small class="font-weight-bold">@ViewData["totalCost"]</small></h4>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                <a type="button" class="btn btn-primary" asp-controller="ShoppingCart" asp-action="Checkout">Checkout</a>
+            </div>
+        </div>
+    </div>
+</div>

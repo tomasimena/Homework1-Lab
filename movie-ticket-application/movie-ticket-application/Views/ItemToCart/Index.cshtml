@@ -1,0 +1,19 @@
+﻿
+
+
+<div class="d-flex justify-content-center align-items-center">
+
+    <form action="/ItemToCart" method="post">
+
+        <input hidden id="id" name="id" type="number" value="@ViewData.Model" />
+
+        <input id="quantity" name="quantity" type="number" placeholder="Quantity" />
+
+        <button type="submit" asp-controller="ItemToCart" asp-action="AddToCart"
+                class="btn btn-lg btn-success">
+            Add To Cart
+        </button>
+
+    </form>
+
+</div>

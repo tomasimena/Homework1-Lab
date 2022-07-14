@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31025.194
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "movie-ticket-application", "movie-ticket-application\movie-ticket-application.csproj", "{2AA4BF8A-7F27-44B4-88D5-A8F045E8BFDD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2AA4BF8A-7F27-44B4-88D5-A8F045E8BFDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AA4BF8A-7F27-44B4-88D5-A8F045E8BFDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AA4BF8A-7F27-44B4-88D5-A8F045E8BFDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AA4BF8A-7F27-44B4-88D5-A8F045E8BFDD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3AF0D105-0537-43B5-8F61-3058D981446B}
+	EndGlobalSection
+EndGlobal
